@@ -15,7 +15,7 @@ This document contains the canonical mapping from ACE node names to the `xmi:typ
 - Do not rely on old example `.msgflow` files as the source of truth.
 
 ### Finding Unknown Property Names
-When you encounter a message flow node property name that you don't recognize:
+When you encounter a message flow node property name that you don't recognize you can work it out using two xsd files within the ACE product installation:
 
 1. **Search MessageFlowUI.xsd first**: Look for the user's property description (e.g., "Generate default HTTP headers from input")
 2. **Extract the property ID**: Find the attribute ID (e.g., `id="Property.generateDefaultHttpHeaders"`)
@@ -31,7 +31,10 @@ When you encounter a message flow node property name that you don't recognize:
 - Result: Add attribute `generateDefaultHttpHeaders="false"` to the node
 
 **XSD File Locations:**
-- The XSD files can be found in the ACE installation for example on Windows at `C:\Program Files\IBM\ACE\13.0.n.0\common\schemas\MessageFlow`
+- The XSD files can be found in the ACE installation at `<ACE Install Location>/common/schemas/MessageFlow'
+- For example the location within the default install location on Windows is `C:\Program Files\IBM\ACE\13.0.M.F\common\schemas\MessageFlow` where M represents the ACE Modification release number and F represents the ACE Fixpack release number such as `13.0.9.0` In general pick the latest available release, and therefore the directory with the highest available number M.
+- For example the location within the default install location on Linux is `/opt/IBM/ace-13.0.M.F/common/schemas/MessageFlow` where M represents the ACE Modification release number and F represents the ACE Fixpack release number such as `13.0.9.0` In general pick the latest available release, and therefore the directory with the highest available number M.
+- For example the location within the default install location on MacOS is `/Applications/IBM App Connect Enterprise 13.0.M.F/common/schemas/MessageFlow` where M represents the ACE Modification release number and F represents the ACE Fixpack release number such as `13.0.9.0` In general pick the latest available release, and therefore the directory with the highest available number M.
 - If you do not have access to the XSD files you should ask the user to provide them from the above location.
 
 ---
