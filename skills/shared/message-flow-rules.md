@@ -24,6 +24,8 @@ Use this document for generic message flow creation and review before consulting
 - Within the `ecore:EPackage` element, the .msgflow should always carry the following hardcoded attribute values `xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility"`
 - Within the .msgflow create a child element of `ecore:EPackage` with name of `eClassifiers`
 - Within the `eClassifiers` element, create a child element with content `<eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>`
+- Within the `eClassifiers` element, create a child element with content `<colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ProjectName/icons/full/obj16/FlowName.gif"/>` where `ProjectName` must be substituted with the name of the project in which the message flow is being created and `FlowName` must be substituted with the name of the message flow.
+- Within the `eClassifiers` element, create a child element with content `<colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/ProjectName/icons/full/obj30/FlowName.gif"/>` where `ProjectName` must be substituted with the name of the project in which the message flow is being created and `FlowName` must be substituted with the name of the message flow.
 - Within the `.msgflow` use a `composition` element to contain multiple child elements named `nodes` and `connections`
 - Unless the user explicitly asks for square shaped message flow nodes rather than rectangles, when creating a `.msgflow` specify an attribute of `nodeLayoutStyle="RECTANGLE"` within the `eClassifiers` element.
 
