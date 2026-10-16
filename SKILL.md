@@ -1,6 +1,6 @@
 ---
-name: ace-bob
-description: Compatibility entry point for the ACE Bob repository. Use this file to discover the canonical ACE skills organized under skills/.
+name: ace-flowpilot
+description: Compatibility entry point for the ACE Flowpilot repository. Use this file to discover the canonical ACE skills organized under skills/.
 ---
 
 # ACE Bob Skills
